@@ -1,0 +1,11 @@
+/media/*.webp
+  Content-Type: image/webp
+
+/media/*.mp4
+  Content-Type: video/mp4
+
+/media/*.webm
+  Content-Type: video/webm
+
+/media/*.vtt
+  Content-Type: text/vtt; charset=utf-8
