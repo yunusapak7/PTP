@@ -14,7 +14,7 @@ test("DTPaper impact section connects the plastic challenge with the WTiN recogn
     assert.match(html, /dtpaper-impact-award/);
     assert.match(html, /dtpaper-plastic-impact-visual\.webp/);
     assert.match(html, /canapa-award-certificate-2025\.webp/);
-    assert.match(html, locale === "en" ? /Approximately 200 tonnes/ : /Yaklaşık 200 ton/);
+    assert.match(html, locale === "en" ? /Approximately 200.000 tonnes/ : /Yaklaşık 200.000 ton/);
     assert.match(html, locale === "en" ? /WTiN Winner of Sustainability/ : /WTiN Sürdürülebilirlik Kazananı/);
     assert.match(html, locale === "en" ? /company-stated, volume-dependent technology target/ : /Canapa tarafından belirtilen hacme bağlı teknoloji hedefidir/);
   }
