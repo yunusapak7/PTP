@@ -91,10 +91,9 @@ export async function POST(request: Request) {
         try {
             response = await sendEmailWithRetry(emailPayload, resendApiKey);
         } catch (error) {
-            if (error instanceof DOMException && (error.name === "TimeoutError" || error.name === "AbortError")) {
-                return Response.json({ message: message("Email delivery timed out. Your enquiry was not confirmed; please try again.", "E-posta teslimi zaman aşımına uğradı. Başvurunuz onaylanmadı; lütfen yeniden deneyin.") }, { status: 504 });
-            }
-            return Response.json({ message: message("The delivery service is temporarily unavailable. Please try again later.", "Teslimat hizmetine şu anda ulaşılamıyor. Lütfen daha sonra yeniden deneyin.") }, { status: 502 });
+            console.error("Fetch Exception:", error);
+            const errString = error instanceof Error ? error.message : String(error);
+            return Response.json({ message: message(`Network error: ${errString}`, `Ağ hatası: ${errString}`) }, { status: 502 });
         }
 
         if (!response.ok) {
