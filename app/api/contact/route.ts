@@ -102,6 +102,12 @@ export async function POST(request: Request) {
             console.error("Resend API Error:", errorText);
             return Response.json({ message: message(`Delivery failed: ${errorText}`, `Teslimat başarısız oldu: ${errorText}`) }, { status: 502 });
         }
+
+        recentSubmissions.set(fingerprint, now);
+        return Response.json({ message: message(
+                "Thank you. Your project enquiry has been received. We aim to acknowledge it within two business days.",
+                "Teşekkür ederiz. Proje başvurunuz alınmıştır. Başvurunuza iki iş günü içinde ilk yanıtı vermeyi hedefliyoruz.",
+            ) });
     } catch {
         return Response.json({ message: message("The submission could not be processed.", "Başvuru işlenemedi.") }, { status: 400 });
     }
