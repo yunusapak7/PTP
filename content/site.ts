@@ -343,7 +343,7 @@ const baseInsightArticles = [
     ["The current industrial structure", "Barrier chemistry is applied to many substrates and then printed, cut, folded, glued, filled and used under different exposure conditions."],
     ["The technical challenge", "Performance must be adjustable without losing coating integrity, converting compatibility or industrial runnability. One formulation level is unlikely to fit every structure."],
     ["The PTP approach", "Bioma-ORX® is positioned as a water-based, PFAS-free barrier platform tuned around substrate, exposure, coat weight and end use."],
-    ["Validation requirements", "The finished package must be tested for the intended food type, temperature, duration, market and converting route. Food-contact status cannot be inferred from chemistry alone."],
+    ["Validation rxequirements", "The finished package must be tested for the intended food type, temperature, duration, market and converting route. Food-contact status cannot be inferred from chemistry alone."],
   ] },
   { slug: "ovenable-paperboard-plastic-film", title: "Why Ovenable Paperboard Still Depends on Plastic Film", category: "Ovenable packaging", intro: "Heat resistance is only one part of replacing PET-laminated ovenable structures with a coated fibre system.", technology: "Explore Ceralith™", technologyHref: "/en/technologies/ceralith", sections: [
     ["The problem", "Many ovenable paperboard structures rely on PET film to provide heat and grease performance, creating a composite construction that can complicate fibre recovery."],
@@ -417,7 +417,14 @@ export const insightArticles = baseInsightArticles.map(article => {
 });
 
 export const nav = [
-  ["Platform", "/en/platform"], ["Technologies", "/en/technologies"], ["How We Work", "/en/how-we-work"], ["Industrial Scale", "/en/industrial-scale"], ["Global Hub", "/en/global-hub"], ["Insights", "/en/insights"]
+    ["Platform", "/en/platform"],
+    ["Technologies", "/en/technologies"],
+    ["How We Work", "/en/how-we-work"],
+    ["Industrial Scale", "/en/industrial-scale"],
+    ["Global Hub", "/en/global-hub"],
+    ["Caring for Nature", "/en/caring-for-nature"],
+    ["Beauty in Nature", "/en/beauty-in-nature"],
+    ["Insights", "/en/insights"]
 ] as const;
 
 export const disclaimer = "Performance depends on substrate, coating weight, process conditions, converting configuration and final end-use. Food-contact, regulatory, recyclability and application-specific claims must be validated on the final structure for the intended market and use.";

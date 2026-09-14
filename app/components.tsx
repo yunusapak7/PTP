@@ -23,7 +23,8 @@ export function Header() {
   const pathname = usePathname();
   const isTr = pathname?.startsWith("/tr");
   const counterpart = isTr ? pathname.replace(/^\/tr/, "/en") : (pathname || "/en").replace(/^\/en/, "/tr");
-  const activeNav = isTr ? [["Platform", "/tr/platform"], ["Teknolojiler", "/tr/technologies"], ["Nasıl Çalışıyoruz", "/tr/how-we-work"], ["Endüstriyel Ölçek", "/tr/industrial-scale"], ["Küresel Merkez", "/tr/global-hub"], ["İçgörüler", "/tr/insights"]] as const : nav;
+  const activeNav = isTr ? [["Platform", "/tr/platform"], ["Teknolojiler", "/tr/technologies"], ["Nasıl Çalışıyoruz", "/tr/how-we-work"], ["Endüstriyel Ölçek", "/tr/industrial-scale"], ["Küresel Merkez", "/tr/global-hub"], ["Doğaya İyilik", "/tr/dogaya-iyilik"],   
+      ["Doğaya Güzellik", "/tr/dogaya-guzellik"],["İçgörüler", "/tr/insights"]] as const : nav;
   useEffect(()=>{
     const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const sections=[...document.querySelectorAll<HTMLElement>(".section,.final-cta,.mini-cta")];
