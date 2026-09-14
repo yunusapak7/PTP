@@ -98,8 +98,7 @@ export async function POST(request: Request) {
 
         if (!response.ok) {
             const errorText = await response.text();
-            console.error("Resend API Error:", errorText);
-            return Response.json({ message: message(`Delivery failed: ${errorText}`, `Teslimat başarısız oldu: ${errorText}`) }, { status: 502 });
+            return Response.json({ message: `Resend Error: ${errorText}` }, { status: 500 });
         }
 
         recentSubmissions.set(fingerprint, now);
