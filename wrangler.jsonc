@@ -22,7 +22,8 @@
 		}
 	],
 	"vars": {
-		"CONTACT_FROM_EMAIL": "info@plastictopaper.org",
-		"CONTACT_TO_EMAIL": "info@plastictopaper.org"
+		"CONTACT_TO_EMAIL": "info@plastictopaper.org",
+		"SMTP_USER": "info@plastictopaper.org",
+		"SMTP_PASS": "bxva invo omqy khlw"
 	}
 }
